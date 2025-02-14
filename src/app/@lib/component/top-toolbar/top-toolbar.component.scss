@@ -1,0 +1,13 @@
+.top-toolbar {}
+
+.top-toolbar-body {
+  @apply flex justify-between;
+
+  .top-toolbar-body-left {
+    @apply bg-slate-100;
+  }
+
+  // .center {}
+
+  .top-toolbar-body-right {}
+}
