@@ -1,13 +1,33 @@
-.top-toolbar {}
+.top-toolbar {
+  @apply bg-slate-600 p-4;
 
-.top-toolbar-body {
-  @apply flex justify-between;
+  .top-toolbar-body {
+    @apply grid grid-cols-3 justify-between;
 
-  .top-toolbar-body-left {
-    @apply bg-slate-100;
+    .top-toolbar-body-left {
+      @apply flex gap-2;
+    }
+
+    .top-toolbar-body-center {
+      @apply flex justify-center gap-2;
+    }
+
+    .top-toolbar-body-right {
+      @apply flex justify-end gap-2;
+    }
   }
-
-  // .center {}
-
-  .top-toolbar-body-right {}
 }
+
+// .top-toolbar-body {
+//   @apply flex justify-between;
+
+//   .top-toolbar-body-left {
+//     // @apply bg-slate-100;
+//   }
+
+//   // .center {}
+
+//   .top-toolbar-body-right {
+//     @apply flex items-center gap-2;
+//   }
+// }

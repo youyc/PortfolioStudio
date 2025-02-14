@@ -1,10 +1,44 @@
 <main class="top-toolbar">
+  <!-- top-toolbar-body -->
   <div class="top-toolbar-body">
-    <!-- left body -->
-    <div class="top-toolbar-body-left">logo</div>
-    <!-- center body -->
-    <!-- right body -->
-    <div class="top-toolbar-body-right">menu</div>
+    <!-- left -->
+    <div class="top-toolbar-body-left">
+      <ng-content select="[left]"></ng-content>
+    </div>
 
+    <!-- center -->
+    <div #center class="top-toolbar-body-center">
+      <ng-content select="[center]"></ng-content>
+    </div>
+
+    <!-- right -->
+    <div #right class="top-toolbar-body-right">
+      <ng-content select="[right]"></ng-content>
+    </div>
+
+    <!-- <div>
+      <ng-container
+        [ngTemplateOutlet]="left"
+        class="top-toolbar-body-left"
+      ></ng-container>
+    </div> -->
   </div>
 </main>
+
+<!-- PrimeNG -->
+<!-- <p-toolbar class="top-toolbar">
+  <ng-template #start>
+    <div class="top-toolbar-body-left">LOGO</div>
+  </ng-template>
+  <ng-template #center>
+
+  </ng-template>
+  <ng-template #end>
+    <div class="top-toolbar-body-right">
+      <div>About</div>
+      <div>Service</div>
+      <div>Sample</div>
+    </div>
+
+  </ng-template>
+</p-toolbar> -->

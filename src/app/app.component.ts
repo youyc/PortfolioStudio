@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TopToolbarComponent } from '@lib/component/top-toolbar/top-toolbar.component';
+import { ButtonModule } from 'primeng/button';
+import { AppTopToolbarComponent } from './@config/component/app-top-toolbar/app-top-toolbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TopToolbarComponent],
+  imports: [RouterOutlet, AppTopToolbarComponent, ButtonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
