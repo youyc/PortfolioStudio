@@ -4,9 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable-content {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 .main {
-  height: 100vh;
-  width: 100vw;
+  @apply h-screen; //w-screen
 }
 
 body {
