@@ -1,6 +1,45 @@
-.intro-section {
-  @apply h-svh; //w-screen
-  // @apply h-full; //w-screen
+.snap-section {
+  @apply h-svh;
+}
+
+.snap-center-section {
+  @apply snap-always snap-center;
+}
+
+.section1 {
+  @apply bg-gradient-to-r from-slate-50 to-slate-300;
+
+  .section1-container {
+    @apply w-full h-full;
+  }
+
+  .section1-title {
+    @apply text-5xl leading-[65px] font-bold bg-gradient-to-r from-indigo-600 to-sky-400
+      bg-clip-text text-transparent drop-shadow-lg;
+
+    // color: rgb(255, 255, 255);
+    // text-shadow: 2px 3px #5468ff;
+    // color: rgb(8 0 0);
+    // text-shadow: 2px 3px #5468ff;
+
+    // color: rgb(66 0 193);
+    // text-shadow: 2px 2px #9faaff;
+  }
+
+  .section1-subtitle {
+    @apply text-2xl font-bold font-cursive mb-12;
+  }
+
+  .section1-description {
+  }
+
+  .section1-profile-picture {
+    @apply bg-gray-100 rounded-full;
+  }
+}
+
+.font-cursive {
+  font-family: cursive;
 }
 
 .scroll-section {
