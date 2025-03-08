@@ -1,15 +1,23 @@
 <main class="main overflow-hidden">
   <!-- Top Toolbar -->
-  <app-top-toolbar></app-top-toolbar>
+  <!-- <app-top-toolbar></app-top-toolbar> -->
 
   <div class="scroll-section scrollable-content">
     <!-- Section 1 -->
-    <section class="section1 snap-section snap-center-section">
+    <!-- <section class="section1 snap-section snap-center-section"> -->
+    <section class="section1">
       <!-- <section class="section1"> -->
-      <div class="section1-container p-28 pb-44">
+      <!-- <div class="section1-container p-28 pb-44"> -->
+      <div class="section-container p-28">
+        <div class="section1-content">
+          <div class="section1-title"></div>
+          <div>
+            <img src="pixel-slime-blue-removebg.png" />
+          </div>
+        </div>
+
         <!-- <div #box class="box h-56 w-56 bg-gray-400">123123</div> -->
-        <div class="grid grid-cols-3 gap-x-20">
-          <!-- Section1 Left: start -->
+        <!-- <div class="grid grid-cols-3 gap-x-20">
           <div class="col-span-2 flex flex-col">
             <div class="flex mt-24">
               <div class="section1-title"></div>
@@ -25,21 +33,61 @@
               <div>Icon 4</div>
             </div>
           </div>
-          <!-- Section1 Left: end -->
 
-          <!-- Section1 Right: start -->
-          <!-- <div class="section1-profile-picture col-span-1"> -->
           <div class="col-span-1">
             <img src="pixel-slime-blue-removebg.png" />
           </div>
-          <!-- Section1 Right: end -->
-        </div>
+        </div> -->
       </div>
     </section>
 
-    <section class="snap-section snap-always snap-center">
-      <!-- <section class=""> -->
-      <div class="flex flex-col w-full h-full p-28 pb-44">
+    <!-- Section 2 -->
+    <!-- <section class="section2 snap-section snap-always snap-center"> -->
+    <section class="section2">
+      <div class="section-container !p-0">
+        <div class="section2-content">
+          <!-- [className]="'project-item-' + '-1'" -->
+          @for (item of projectList; track $index) {
+          <!-- class="project-item" -->
+          <div
+            class="project-item"
+            [class]="'project-item-' + $index"
+            (mouseenter)="mouseEnter($index)"
+            (mouseleave)="mouseLeave($index)"
+          >
+            <div class="project-bg" [class]="'project-bg-' + $index"></div>
+            <div class="absolute">
+              <div class="project-title">{{ item.Name }}</div>
+              <div class="project-info">{{ item.Info }}</div>
+            </div>
+          </div>
+          <!-- <div
+            class="project-item"
+            (mouseenter)="mouseEnter($event)"
+            (mouseleave)="mouseLeave()"
+          >
+            <div class="project-title">Inventory App</div>
+            <div class="project-info">Operation Mobile App</div>
+          </div> -->
+          }
+          <!-- <div class="project-title">Business Landing</div>
+          <div class="project-info">Responsive Web</div> -->
+
+          <!-- <div class="section2-title !items-start">about</div> -->
+          <!-- <div class="section2-title !items-end">us</div> -->
+          <!-- <div class="section2-body">
+            At Digital Slime Studio, we are passionate about transforming ideas
+            into innovative software solutions that drive business success. With
+            a team of skilled engineers, designers, and problem-solvers, we
+            specialize in crafting tailored software solutions that meet the
+            unique needs of our clients. Our mission is to empower businesses
+            with cutting-edge technology, seamless user experiences, and
+            scalable systems that propel growth. Whether you're a startup or an
+            established enterprise, we’re here to turn your vision into reality.
+          </div> -->
+        </div>
+      </div>
+      <!-- <div class="flex flex-col w-full h-full p-28 pb-44">
         <div class="flex text-3xl font-bold mb-6">Working Experience</div>
 
         <div class="card work-exp-card h-full">
@@ -49,7 +97,7 @@
               <p-tab value="1">SBT</p-tab>
               <p-tab value="2">ING</p-tab>
             </p-tablist>
-            <!-- <p-tabpanels class="!bg-[#DFEAFF]"> -->
+
             <p-tabpanels>
               <p-tabpanel value="0">
                 <p class="m-0">
@@ -91,16 +139,7 @@
           </p-tabs>
         </div>
 
-        <!-- <div class="flex gap-x-3 mb-3">
-          <button class="work-exp-btn" role="button">SRT</button>
-          <button class="work-exp-btn" role="button">SBT</button>
-          <button class="work-exp-btn" role="button">ING</button>
-        </div> -->
-        <!-- <div class="flex work-exp-card h-full">
-          <div class="">Soft Rock Technology</div>
-          <div class="">Content work</div>
-        </div> -->
-      </div>
+      </div> -->
     </section>
   </div>
 

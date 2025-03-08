@@ -6,28 +6,38 @@
   @apply snap-always snap-center;
 }
 
+.section-container {
+  @apply relative w-full h-full p-28;
+}
+
 .section1 {
-  @apply bg-gradient-to-r from-slate-50 to-slate-300;
+  @apply h-[700px] bg-gradient-to-r from-slate-50 to-slate-300;
 
   .section1-container {
     @apply w-full h-full;
   }
 
+  .section1-content {
+    min-height: 100%;
+    @apply flex flex-col gap-y-10 items-center;
+  }
+
   .section1-title {
-    @apply text-5xl leading-[65px] font-bold bg-gradient-to-r from-indigo-600 to-sky-400
-      bg-clip-text text-transparent drop-shadow-lg;
+    filter: drop-shadow(3px 4px black);
+    @apply text-[5rem] leading-[110px]
+      font-bold bg-gradient-to-r from-indigo-600 to-sky-400 bg-clip-text
+      text-transparent; // drop-shadow-lg
 
-    // color: rgb(255, 255, 255);
-    // text-shadow: 2px 3px #5468ff;
-    // color: rgb(8 0 0);
-    // text-shadow: 2px 3px #5468ff;
-
-    // color: rgb(66 0 193);
-    // text-shadow: 2px 2px #9faaff;
+    // @apply text-5xl leading-[65px] font-bold bg-gradient-to-r from-indigo-600 to-sky-400
+    //   bg-clip-text text-transparent drop-shadow-lg;
   }
 
   .section1-subtitle {
     @apply text-2xl font-bold font-cursive mb-12;
+  }
+
+  img {
+    // box-shadow: rgb(38, 57, 77) 0px 20px 20px -10px;
   }
 
   .section1-description {
@@ -44,6 +54,51 @@
 
 .scroll-section {
   @apply h-screen snap-y snap-mandatory overflow-y-scroll;
+}
+
+.section2 {
+  @apply h-[700px] bg-gradient-to-r from-slate-50 to-slate-300;
+
+  .section2-content {
+    min-height: 100%;
+    @apply flex flex-col;
+  }
+
+  // project-item configuration
+  .project-item-p {
+    @apply pl-32;
+  }
+
+  .project-item {
+    // background-image: url("../../public/pixel-slime-blue-removebg.png");
+    @apply relative py-10 h-[180px]; //hover:bg-yellow-300
+  }
+
+  .project-bg {
+    background-image: url("../../public/pixel-slime-blue-removebg.png");
+    @apply absolute top-0 flex justify-center items-center h-full w-0; //hover:bg-blue-300
+  }
+
+  .project-title {
+    @extend .project-item-p;
+    @apply text-[3rem] font-bold;
+  }
+
+  .project-info {
+    @extend .project-item-p;
+    @apply text-xl;
+  }
+
+  .section2-title {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    @apply absolute top-0 w-full h-full flex justify-center;
+    @apply text-[3rem] leading-[110px] font-bold text-teal-700;
+  }
+
+  section2-body {
+    @apply text-[];
+  }
 }
 
 /* CSS */
