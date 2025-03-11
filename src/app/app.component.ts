@@ -26,7 +26,7 @@ export class AppComponent implements AfterViewInit {
       GSAP: null,
     },
     {
-      Name: 'Inventory App',
+      Name: 'Mobile App',
       Info: 'Operation Mobile App',
       Image: 'img',
       GSAP: null,

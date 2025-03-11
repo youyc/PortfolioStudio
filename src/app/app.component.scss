@@ -75,11 +75,16 @@
   }
 
   .project-bg {
+    // transform: perspective(100px) rotateY(5deg);
+    // transform: perspective(500px) rotateY(5deg);
     background-image: url("../../public/pixel-slime-blue-removebg.png");
     @apply absolute top-0 flex justify-center items-center h-full w-0; //hover:bg-blue-300
   }
 
   .project-title {
+    // background: hsl(102, 93%, 62%);
+    // transform: perspective(300px) rotateY(25deg);
+    // transform-origin: left;
     @extend .project-item-p;
     @apply text-[3rem] font-bold;
   }
